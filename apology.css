@@ -187,3 +187,88 @@ p {
 .btn-move {
     transition: all 0.5s ease;
 }
+/* Add these at the end of your existing CSS */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    #page1, #page2, #final-message, #no-upset-message {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .gif-container {
+        height: 120px;
+        margin: 15px 0;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #page1, #page2, #final-message, #no-upset-message {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+    
+    p {
+        font-size: 15px;
+    }
+    
+    .gif-container {
+        height: 100px;
+    }
+    
+    .cute-decoration {
+        font-size: 16px;
+    }
+}
+
+/* Ensure all pages take full height on mobile */
+#page1, #page2, #final-message, #no-upset-message {
+    margin: auto;
+}
+
+/* Make sure hidden pages don't take space */
+.hidden {
+    display: none !important;
+}
+
+/* Fix for mobile viewport */
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+/* Prevent text size adjustment on mobile */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
