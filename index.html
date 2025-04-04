@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Sincere Apology</title>
+    <link rel="stylesheet" href="apology.css">
+    <audio id="bgMusic" loop>
+        <source src="Yung Kai - Blue.mp3" type="audio/mpeg">
+      </audio>
+</head>
+<body>
+    <!-- Page 1: Are you upset? -->
+    <div id="page1">
+        <div class="cute-decoration" style="top: 10px; left: 10px;">🌸</div>
+        <div class="cute-decoration" style="bottom: 10px; right: 10px;">✨</div>
+        
+        <h1>I Need to Ask You Something...</h1>
+        <p>Are you upset or angry with me?</p>
+        
+        <div class="gif-container">
+            <img src="https://media.tenor.com/6f9N2fNE2R0AAAAM/cute-cat.gif" alt="Cute question mark">
+        </div>
+        
+        <div class="btn-container">
+            <button id="yes-btn" class="btn">Yes</button>
+            <button id="no-btn" class="btn">No</button>
+        </div>
+    </div>
+    
+    <!-- Message if not upset -->
+    <div id="no-upset-message">
+        <div class="cute-decoration" style="top: 10px; left: 10px;">💖</div>
+        <div class="cute-decoration" style="bottom: 10px; right: 10px;">💖</div>
+        
+        <h1>I'm So Relieved! <span class="heart">❤</span></h1>
+        <p>Ahhh, okie delulu lang ako tara grind codm</p>
+        
+        <div class="gif-container">
+            <img src="https://media.tenor.com/BP70qe8X0J8AAAAM/crycat-crying-cat.gif" alt="cute">
+        </div>
+    </div>
+    
+    <!-- Page 2: Will you forgive me? -->
+    <div id="page2" class="hidden">
+        <div class="cute-decoration" style="top: 10px; left: 10px;">😔</div>
+        <div class="cute-decoration" style="bottom: 10px; right: 10px;">🙏</div>
+        
+        <h1>Will you please forgive me?</h1>
+        <p style="text-align: justify;">Can I be honest? Looking back sa past week, ang dami kong maling decisions. Una, I regret not choosing you as my group member—sayang, mas okay sana kung kasama kita. Pangalawa, I should've listened to you nung sinabi mong mag-ingat sa volleyball. Tama ka, and I ended up hurting someone because I didn't listen. Tsaka sorry din sa late replies ko sa'yo. You didn't deserve that.</p>
+    
+        <p style="text-align: justify;">Alam ko ang dami kong lapses, pero isa lang sure ako—I don't wanna keep messing up when it comes to you. I really appreciate you, your advice, and how you care kahit hindi ako karapat-dapat. Sana mapatawad mo ko. And if you'll let me, I'll make it up to you.</p>
+            
+        <div class="btn-container" id="forgive-btns">
+            <button id="forgive-yes" class="btn">Yes, I forgive you</button>
+            <button id="forgive-no" class="btn">No</button>
+        </div>
+    </div>
+    
+    <!-- Final message if forgiven -->
+    <div id="final-message">
+        <div class="cute-decoration" style="top: 10px; left: 10px;">🎉</div>
+        <div class="cute-decoration" style="bottom: 10px; right: 10px;">💝</div>
+        
+        <h1>Thank You! <span class="heart">❤</span></h1>
+        <p>Thank you yass, promise babawi ako sayo.</p>
+        
+        <div class="gif-container">
+            <img src="https://media1.tenor.com/m/N6z7fKyQXCgAAAAC/bubu-dudu-bubu.gif" alt="Celebration">
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>

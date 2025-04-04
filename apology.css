@@ -1,0 +1,189 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd6e7 0%, #c8f4ff 100%);
+    transition: background 1s ease;
+}
+
+body.lively-bg {
+    background: linear-gradient(135deg, #ff9bb8 0%, #ffd6e7 100%);
+}
+
+#page1, #page2, #final-message, #no-upset-message {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffb6c1;
+    position: relative;
+    overflow: hidden;
+}
+
+.gif-container {
+    height: 150px;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gif-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+h1 {
+    color: #ff6b9d;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: static;
+}
+
+#yes-btn, #forgive-yes {
+    background-color: #ff6b9d;
+    color: white;
+    transition: transform 0.3s;
+}
+
+#yes-btn:hover, #forgive-yes:hover {
+    background-color: #ff4785;
+    transform: scale(1.05);
+}
+
+#no-btn, #forgive-no {
+    background-color: #f0f0f0;
+    color: #555;
+    transition: transform 0.3s;
+}
+
+#no-btn:hover, #forgive-no:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+#final-message, #no-upset-message {
+    display: none;
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heart-shaped confetti */
+/* Improved Heart-shaped confetti */
+/* Perfect heart-shaped confetti */
+.heart-confetti {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #ff6b9d;
+    animation: heartFall 5s linear infinite;
+    opacity: 0;
+    z-index: 1000;
+    transform: rotate(-45deg) scale(0.7);
+}
+
+.heart-confetti:before,
+.heart-confetti:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: inherit;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart-confetti:before {
+    top: -8px;
+    left: 0;
+}
+
+.heart-confetti:after {
+    top: 0;
+    left: 8px;
+}
+
+@keyframes heartFall {
+    0% {
+        transform: translateY(-100vh) rotate(-45deg) scale(0.3);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(-45deg) scale(0.7);
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.heart {
+    color: #ff6b9d;
+    font-size: 24px;
+    animation: heartbeat 1.5s infinite;
+    display: inline-block;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.cute-decoration {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.btn-move {
+    transition: all 0.5s ease;
+}
