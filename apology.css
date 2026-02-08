@@ -15,7 +15,13 @@ body.lively-bg {
     background: linear-gradient(135deg, #ff9bb8 0%, #ffd6e7 100%);
 }
 
-#page1, #page2, #final-message, #no-upset-message {
+#page1,
+#page2,
+#page3,
+#page4,
+#final-message,
+#no-upset-message,
+#trust-message {
     max-width: 600px;
     margin: 0 auto;
     padding: 30px;
@@ -24,8 +30,38 @@ body.lively-bg {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border: 2px solid #ffb6c1;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
+
+/* Proof container styles */
+.proof-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.proof-item {
+    width: 100%;
+    border-radius: 10px;
+    overflow: visible;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 10px;
+    background: white;
+}
+
+.proof-item:hover {
+    transform: scale(1.02);
+}
+
+.proof-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 .gif-container {
     height: 150px;
@@ -44,7 +80,7 @@ h1 {
     color: #ff6b9d;
     margin-bottom: 20px;
     font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 p {
@@ -72,40 +108,87 @@ p {
     transition: all 0.3s ease;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: static;
 }
 
-#yes-btn, #forgive-yes {
+#yes-btn,
+#forgive-yes,
+#truth-yes,
+#proof-yes,
+#proof-ok-btn {
     background-color: #ff6b9d;
     color: white;
     transition: transform 0.3s;
 }
 
-#yes-btn:hover, #forgive-yes:hover {
+#yes-btn:hover,
+#forgive-yes:hover,
+#truth-yes:hover,
+#proof-yes:hover,
+#proof-ok-btn:hover {
     background-color: #ff4785;
     transform: scale(1.05);
 }
 
-#no-btn, #forgive-no {
+#no-btn,
+#forgive-no,
+#truth-no,
+#proof-no {
     background-color: #f0f0f0;
     color: #555;
     transition: transform 0.3s;
 }
 
-#no-btn:hover, #forgive-no:hover {
+#no-btn:hover,
+#forgive-no:hover,
+#truth-no:hover,
+#proof-no:hover {
     background-color: #e0e0e0;
     transform: scale(1.05);
 }
 
-#final-message, #no-upset-message {
+/* Proof item anchor styling */
+.proof-item a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.proof-item a img {
+    transition: opacity 0.3s ease;
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.proof-item a:hover img {
+    opacity: 0.9;
+}
+
+#final-message,
+#no-upset-message,
+#page3,
+#page4,
+#trust-message {
     display: none;
     animation: fadeIn 1.5s;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Heart-shaped confetti */
@@ -147,14 +230,17 @@ p {
         transform: translateY(-100vh) rotate(-45deg) scale(0.3);
         opacity: 0;
     }
+
     10% {
         opacity: 1;
     }
-    90% {
+
+    50% {
         opacity: 1;
     }
+
     100% {
-        transform: translateY(100vh) rotate(-45deg) scale(0.7);
+        transform: translateY(60vh) rotate(-45deg) scale(0.7);
         opacity: 0;
     }
 }
@@ -171,11 +257,25 @@ p {
 }
 
 @keyframes heartbeat {
-    0% { transform: scale(1); }
-    25% { transform: scale(1.1); }
-    50% { transform: scale(1); }
-    75% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .cute-decoration {
@@ -187,6 +287,7 @@ p {
 .btn-move {
     transition: all 0.5s ease;
 }
+
 /* Add these at the end of your existing CSS */
 
 /* Responsive adjustments */
@@ -196,33 +297,39 @@ p {
         height: auto;
         min-height: 100vh;
     }
-    
-    #page1, #page2, #final-message, #no-upset-message {
+
+    #page1,
+    #page2,
+    #page3,
+    #page4,
+    #final-message,
+    #no-upset-message,
+    #trust-message {
         width: 90%;
         padding: 20px;
         margin: 20px auto;
     }
-    
+
     h1 {
         font-size: 24px;
         margin-bottom: 15px;
     }
-    
+
     p {
         font-size: 16px;
         margin-bottom: 15px;
     }
-    
+
     .btn {
         padding: 10px 20px;
         font-size: 14px;
     }
-    
+
     .gif-container {
         height: 120px;
         margin: 15px 0;
     }
-    
+
     .btn-container {
         flex-direction: column;
         gap: 10px;
@@ -230,29 +337,42 @@ p {
 }
 
 @media (max-width: 480px) {
-    #page1, #page2, #final-message, #no-upset-message {
+
+    #page1,
+    #page2,
+    #page3,
+    #page4,
+    #final-message,
+    #no-upset-message,
+    #trust-message {
         padding: 15px;
     }
-    
+
     h1 {
         font-size: 22px;
     }
-    
+
     p {
         font-size: 15px;
     }
-    
+
     .gif-container {
         height: 100px;
     }
-    
+
     .cute-decoration {
         font-size: 16px;
     }
 }
 
 /* Ensure all pages take full height on mobile */
-#page1, #page2, #final-message, #no-upset-message {
+#page1,
+#page2,
+#page3,
+#page4,
+#final-message,
+#no-upset-message,
+#trust-message {
     margin: auto;
 }
 
@@ -288,18 +408,31 @@ html {
 }
 
 .music-toggle span {
-    width: 4px; /* Default width */
+    width: 4px;
+    /* Default width */
     height: 100%;
-    display: block; /* Ensure visibility */
+    display: block;
+    /* Ensure visibility */
     background-color: #ff6b9d;
     border-radius: 4px;
     animation: bounce 1s infinite ease-in-out;
 }
 
-.music-toggle span:nth-child(1) { animation-delay: 0.1s; }
-.music-toggle span:nth-child(2) { animation-delay: 0.3s; }
-.music-toggle span:nth-child(3) { animation-delay: 0.5s; }
-.music-toggle span:nth-child(4) { animation-delay: 0.2s; }
+.music-toggle span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.music-toggle span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.music-toggle span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.music-toggle span:nth-child(4) {
+    animation-delay: 0.2s;
+}
 
 .music-toggle.muted span {
     animation: none;
@@ -308,8 +441,15 @@ html {
 }
 
 @keyframes bounce {
-    0%, 100% { height: 20%; }
-    50% { height: 100%; }
+
+    0%,
+    100% {
+        height: 20%;
+    }
+
+    50% {
+        height: 100%;
+    }
 }
 
 /* Mobile positioning */
