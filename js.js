@@ -31,8 +31,6 @@ noBtn.addEventListener('click', function () {
 forgiveYes.addEventListener('click', function () {
     page2.classList.add('hidden');
     finalMessage.style.display = 'block';
-    document.body.classList.add('lively-bg');
-    setInterval(createSingleHeart, 200); // Create hearts continuously
 });
 
 // New page elements
@@ -59,6 +57,8 @@ truthYes.addEventListener('click', function () {
 truthNo.addEventListener('click', function () {
     finalMessage.style.display = 'none';
     trustMessage.style.display = 'block';
+    document.body.classList.add('lively-bg');
+    setInterval(createSingleHeart, 200); // Create hearts continuously
 });
 
 // If user wants to see proof
@@ -74,6 +74,8 @@ proofNo.addEventListener('click', function () {
     page3.style.display = 'none';
     page3.classList.add('hidden');
     trustMessage.style.display = 'block';
+    document.body.classList.add('lively-bg');
+    setInterval(createSingleHeart, 200); // Create hearts continuously
 });
 
 // Proof OK button
@@ -82,6 +84,8 @@ proofOkBtn.addEventListener('click', function () {
     page4.style.display = 'none';
     page4.classList.add('hidden');
     trustMessage.style.display = 'block';
+    document.body.classList.add('lively-bg');
+    setInterval(createSingleHeart, 200); // Create hearts continuously
 });
 
 
