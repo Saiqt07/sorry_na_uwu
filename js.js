@@ -31,62 +31,10 @@ noBtn.addEventListener('click', function () {
 forgiveYes.addEventListener('click', function () {
     page2.classList.add('hidden');
     finalMessage.style.display = 'block';
-});
-
-// New page elements
-const page3 = document.getElementById('page3');
-const page4 = document.getElementById('page4');
-const trustMessage = document.getElementById('trust-message');
-
-// Truth buttons
-const truthYes = document.getElementById('truth-yes');
-const truthNo = document.getElementById('truth-no');
-
-// Proof buttons
-const proofYes = document.getElementById('proof-yes');
-const proofNo = document.getElementById('proof-no');
-
-// If user wants to know the truth
-truthYes.addEventListener('click', function () {
-    finalMessage.style.display = 'none';
-    page3.style.display = 'block';
-    page3.classList.remove('hidden');
-});
-
-// If user doesn't want to know the truth
-truthNo.addEventListener('click', function () {
-    finalMessage.style.display = 'none';
-    trustMessage.style.display = 'block';
     document.body.classList.add('lively-bg');
     setInterval(createSingleHeart, 200); // Create hearts continuously
 });
 
-// If user wants to see proof
-proofYes.addEventListener('click', function () {
-    page3.style.display = 'none';
-    page3.classList.add('hidden');
-    page4.style.display = 'block';
-    page4.classList.remove('hidden');
-});
-
-// If user trusts without proof
-proofNo.addEventListener('click', function () {
-    page3.style.display = 'none';
-    page3.classList.add('hidden');
-    trustMessage.style.display = 'block';
-    document.body.classList.add('lively-bg');
-    setInterval(createSingleHeart, 200); // Create hearts continuously
-});
-
-// Proof OK button
-const proofOkBtn = document.getElementById('proof-ok-btn');
-proofOkBtn.addEventListener('click', function () {
-    page4.style.display = 'none';
-    page4.classList.add('hidden');
-    trustMessage.style.display = 'block';
-    document.body.classList.add('lively-bg');
-    setInterval(createSingleHeart, 200); // Create hearts continuously
-});
 
 
 // Make No button move away from cursor (only affects No button on page 2)
